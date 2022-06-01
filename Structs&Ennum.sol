@@ -21,14 +21,14 @@ contract Customer {
 
      //Now I'm Creating a temprory Memory Variable and initializing it with given values and copying it to the storage struct(the state variable of Struct(SubBusineses) )
       function newSubBusiness(string memory _name, uint _value, address _addr) public {
-        Business memory tempBusiness = Business({
+        Business memory tempSubBusiness = Business({
             name : _name,
             value : _value,
             addr : _addr
         });
       
        // Copying Memory Struct Variable to the Storage one.
-        subBusiness = tempBusiness;
+        subBusiness = tempSubBusiness;
       }
 
 

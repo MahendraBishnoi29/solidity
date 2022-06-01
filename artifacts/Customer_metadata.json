@@ -96,11 +96,11 @@
 	},
 	"sources": {
 		"Structs&Ennum.sol": {
-			"keccak256": "0xaba26aa6e97db773aff6fed760de16daea99b605519a5652bf22a5d7e6326c80",
+			"keccak256": "0x63de30969075881009879fa6d878457fcf0a536875b7b92b65e2d9491f59252f",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://cb27eb3892ff2ad3b39f2760055157557b3d276bbd8c4d2b15fa6b9f9a6c16f4",
-				"dweb:/ipfs/QmfJ3JQ8w2eYJRD1PXZZ7v8LR8T6ddtZchzzVEPFhWCJoC"
+				"bzz-raw://2eb67da8689e301af2d59bdea49f31cf9d1c5ea36270c951a19cc9024d177e9d",
+				"dweb:/ipfs/QmYQxhJYy2DHgZEP7tH5GcJv3qbmGrVrz2r6KEHYbALBsY"
 			]
 		}
 	},
