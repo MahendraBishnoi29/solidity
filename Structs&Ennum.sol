@@ -2,35 +2,34 @@
 
 pragma solidity >=0.6.0 <0.9.0;
 
-struct Instructor {
+struct Business {
     string name;
-    uint age;
+    uint value;
     address addr;
 }
 
-contract Acedamy{
-    Instructor public acedamyInstructor;
-    //Enum
-    enum State {open, close}
-    //defining a new acedemyState variable using State ENUM
-    State public acedamyState = State.open;
+contract Customer {
+    // I'm Creating a variable using Struct(Business)
+     Business public subBusiness;
 
-    constructor(string memory _name, uint _age) {
-        acedamyInstructor.name = _name;
-        acedamyInstructor.age = _age;
-        acedamyInstructor.addr = msg.sender;
-    }
+    // Now i'm initializing the Struct Variable using Constructor Function
+     constructor( string memory _name, uint _value ){
+      subBusiness.name = _name;
+      subBusiness.value = _value;
+      subBusiness.addr = msg.sender;
+     }
 
-    function changeIntructor(string memory _name, uint _age, address _addr) public{
-        if(acedamyState == State.open){
-           Instructor memory changeInstructor = Instructor({
-              name: _name,
-              age: _age,
-              addr: _addr
-           });
-           
-           acedamyInstructor = changeInstructor;
-        }
+     //Now I'm Creating a temprory Memory Variable and initializing it with given values and copying it to the storage struct(the state variable of Struct(SubBusineses) )
+      function newSubBusiness(string memory _name, uint _value, address _addr) public {
+        Business memory tempBusiness = Business({
+            name : _name,
+            value : _value,
+            addr : _addr
+        });
       
-    }
+       // Copying Memory Struct Variable to the Storage one.
+        subBusiness = tempBusiness;
+      }
+
+
 }
