@@ -8,17 +8,22 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "myCity",
+				"name": "nestedMap",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "bool",
 						"name": "",
-						"type": "string"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -27,17 +32,22 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
 						"internalType": "uint256",
-						"name": "_hs",
+						"name": "_i",
 						"type": "uint256"
 					},
 					{
-						"internalType": "string",
-						"name": "_hn",
-						"type": "string"
+						"internalType": "bool",
+						"name": "_bool",
+						"type": "bool"
 					}
 				],
-				"name": "setHouse",
+				"name": "setMap",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -71,11 +81,11 @@
 	},
 	"sources": {
 		"Mappings.sol": {
-			"keccak256": "0x64d7ced3725f9ccf0dd68a05a03754a836657b691af37cd544572d2b0037effa",
+			"keccak256": "0x9fe2d9c4b97f988f66513cd0db486447ffb9942ab7ee00264125ed9615198c79",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a92a948c8b6129c660956fad9840f4544e1cdab797f5e9659065e3630377e8a6",
-				"dweb:/ipfs/Qmd58CYCETqFm4xpoMYesFh2j4oxqnY1QjLfzwsET7sdJL"
+				"bzz-raw://7bbfd246bfdb79d7350881ef4fb5c2d9567dca204a21f8cfb3b2485e61db0f5b",
+				"dweb:/ipfs/QmXCRCgtpoMyJ1RRJjgYMUNJyE6dTzr33BSkypLcCJiBfd"
 			]
 		}
 	},
