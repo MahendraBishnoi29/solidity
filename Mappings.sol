@@ -6,11 +6,8 @@ contract Mapping{
  
    mapping(uint => string) public myCity;
 
-
     function setHouse(uint _hs, string memory _hn) public{
          myCity[_hs] = _hn;
     }
-
-   
 
 }
