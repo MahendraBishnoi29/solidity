@@ -8,38 +8,27 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "bids",
+				"outputs": [
+					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"name": "myCity",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_hs",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "_hn",
-						"type": "string"
-					}
-				],
-				"name": "setHouse",
+				"inputs": [],
+				"name": "checkBids",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -56,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Mappings.sol": "Mapping"
+			"Mapping.sol": "Mappings"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -70,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"Mappings.sol": {
-			"keccak256": "0x79ab29cc793e82c69664d08fe10d97c40da48c9335f1253e88da7ad23cf627d2",
+		"Mapping.sol": {
+			"keccak256": "0x1eaf0f38540bd36cea9bf8259cb626df212b250ba2ae16328a03e3b3c5990bbe",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://1a57b211fd522abd556192d72c86fd9a9beddcad6c4f23cb92c77249ed82c22d",
-				"dweb:/ipfs/Qma4iUCZac66n6aJd9a5LmaRhDgJm9AXG4FhTBi56xqqW3"
+				"bzz-raw://6b53bede704d6d55171a7f0871d83aa6bf915d2d65d15739828395068c7a306b",
+				"dweb:/ipfs/QmdewxXbYiGfp7aXQg1WLnuxQXiNqufoFt5HsA3fqbpZq9"
 			]
 		}
 	},
