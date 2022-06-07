@@ -4,19 +4,21 @@ pragma solidity >=0.6.0 <0.9.0;
 
 contract Enum{
     //Define a Enum 
-    enum Winner {yes, no, notSure}
-      
-    // Define a Variable Using Winner Enum 
-    Winner public person = Winner.no;
-    uint public amount = 100;
+    enum  States{applied, pending, accepted}
 
-    function checkWinner() public{
-        if(person == Winner.yes){
-            amount = 0;
-        }
+    // Declare a variable of the type Status(enum)
+    // This can only contain one of the predefined values
+    States public state;
+
+    // Pass a uint for input to update the value
+    function setState(States _state) public {
+        state = _state;
     }
 
-    function changeWinner() public{
-        person = Winner.notSure;
+    // Update value to a specific enum members
+    function changeState() public {
+        state = States.pending;
     }
+
+
 }

@@ -7,37 +7,30 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "amount",
-				"outputs": [
+				"name": "changeState",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"internalType": "enum Enum.States",
+						"name": "_state",
+						"type": "uint8"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "changeWinner",
+				"name": "setState",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "checkWinner",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "person",
+				"name": "state",
 				"outputs": [
 					{
-						"internalType": "enum Enum.Winner",
+						"internalType": "enum Enum.States",
 						"name": "",
 						"type": "uint8"
 					}
@@ -74,11 +67,11 @@
 	},
 	"sources": {
 		"Enums.sol": {
-			"keccak256": "0xe72a8221cd41f010267c97dd7a950e199650e8e926e39fefed0cb0e968efe86f",
+			"keccak256": "0xe331f35e9b42f77582ce45875d74e615703fd9f0aaf1298261b0538248f48f29",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a1ee23cfc53a95078f26b18758b33dc625eef3fd3344ee7a8ec17612eadee3b1",
-				"dweb:/ipfs/QmTxaHGdUQSReiPEvU1zdXGyBN6jCyER2kVqZ9Kytr8M9p"
+				"bzz-raw://d962d26bfa895674481096192487685c889b2231304c96bb16ebc7c1e585cb76",
+				"dweb:/ipfs/QmRx7s9SWdpLMtyiWW5uv346sb95uSmzAjgTzFk59Medzt"
 			]
 		}
 	},
