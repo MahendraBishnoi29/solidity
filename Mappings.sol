@@ -17,4 +17,13 @@ contract Mapping{
                    nestedMap[_addr][_i] = _bool;
             }
 
+
+            //Deleting Data From Mappings
+
+            function deleteMap(address _addr, uint _i) public{
+                delete nestedMap[_addr][_i];
+            }
+             
+
+
 }

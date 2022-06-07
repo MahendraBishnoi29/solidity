@@ -9,6 +9,24 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_i",
+						"type": "uint256"
+					}
+				],
+				"name": "deleteMap",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					},
@@ -81,11 +99,11 @@
 	},
 	"sources": {
 		"Mappings.sol": {
-			"keccak256": "0x9fe2d9c4b97f988f66513cd0db486447ffb9942ab7ee00264125ed9615198c79",
+			"keccak256": "0xbbc332e66ee2c1dbb021770c0c6693b9744baa279c4228fb864d07668f48990d",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://7bbfd246bfdb79d7350881ef4fb5c2d9567dca204a21f8cfb3b2485e61db0f5b",
-				"dweb:/ipfs/QmXCRCgtpoMyJ1RRJjgYMUNJyE6dTzr33BSkypLcCJiBfd"
+				"bzz-raw://12881c89a8993b69956778821412084a739e0c39219a8bd3bece345738c5c3a6",
+				"dweb:/ipfs/QmQYS72QoKZ6ULGfQwptnVECKoe71p5u3z762i4FcigTZH"
 			]
 		}
 	},
