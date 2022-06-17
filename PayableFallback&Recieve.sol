@@ -28,4 +28,16 @@ contract Deposit {
         // and balance is a member of any variable of type address. 
         return address(this).balance;
     }
+ 
+      // send ethers to any account
+        function transferEther(address payable recepient, uint amount) public returns(bool){
+           // the amount of the contract should be lower then our balance
+           if(amount < getBalance() ){
+              recepient.transfer(amount);
+              return true;
+           }else {
+              return false;
+           }
+        }
+
 }
