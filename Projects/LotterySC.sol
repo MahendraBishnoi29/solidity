@@ -24,4 +24,22 @@ contract Lottery {
         require(msg.sender == Manager);
         return address(this).balance;
     }
+
+    // generate random account to select the winner
+    function random() public view returns(uint) {
+        return uint(keccak256(abi.encodePacked(block.difficulty, block.timestamp, Players.length)));
+    }
+
+    function pickWinner() public {
+        require(msg.sender == Manager);
+        require(Players.length >= 3);
+        
+        address payable winner;
+
+        uint r = random();
+        uint index = r % Players.length;
+        winner = Players[index];
+        Players = new address payable[](0);
+        
+    }
 }
