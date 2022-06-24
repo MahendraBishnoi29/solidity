@@ -11,7 +11,7 @@ contract Mappings{
 
    //Another mapping Example ✅
 
-//    mapping(uint => string) public myBooks;
+
    mapping(uint => Book) public books;
 
    struct Book {
@@ -19,20 +19,16 @@ contract Mappings{
       string author;
    }
 
-//    constructor()  {
-//        myBooks[0] = "The Power of Subconsious Mind";
-//        myBooks[1] = "think and grown rich";
-//        myBooks[2] = "Deep Work";
-//    }
-
     // function for changing the booka and adding the author
     function addBook(uint _id, string memory _title, string memory _author) public {
         books[_id] = Book(_title, _author);
     }
 
      // delete book
-    function deleteBook(uint i) public {
-        delete books[i];
-    }
+    // function deleteBook(uint i) public {
+    //     delete books[i];
+    // }
+
+    
   
 }
