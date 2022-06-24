@@ -12,23 +12,26 @@ contract Mappings{
    //Another mapping Example ✅
 
 
-   mapping(uint => Book) public books;
+//    mapping(uint => Book) public books;
 
-   struct Book {
-      string id;
-      string author;
-   }
+//    struct Book {
+//       string id;
+//       string author;
+//    }
 
     // function for changing the booka and adding the author
-    function addBook(uint _id, string memory _title, string memory _author) public {
-        books[_id] = Book(_title, _author);
-    }
+    // function addBook(uint _id, string memory _title, string memory _author) public {
+    //     books[_id] = Book(_title, _author);
+    // }
 
      // delete book
     // function deleteBook(uint i) public {
     //     delete books[i];
     // }
 
+
+
+   //Another mapping Example ✅
     
   
 }
