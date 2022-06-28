@@ -33,14 +33,14 @@ contract BikeChain {
 
      // Check Out the Bike
      function checkOut (address walletAddress) public {
-         renters[walletAddress].Active = true;
+         renters[walletAddress].Active = true; 
          renters[walletAddress].Start = block.timestamp; // This Will Return the exact time when the Renter Checked Out in Unix Timestamp
-         renters[walletAddress].canRent = false;
+         renters[walletAddress].canRent = false; // Since Renter is active and already checked out so he can't rent a bike now
      }
 
      // After Check out Renters can now Check in to Rent a Bike
      function checkIn(address walletAddress) public {
-         renters[walletAddress].Active = false;
+         renters[walletAddress].Active = false; 
          renters[walletAddress].End = block.timestamp; // give us the time when Renter had checked In
          setDueAmount(walletAddress);
      }
@@ -57,7 +57,7 @@ contract BikeChain {
          return timeInMinutes;
      }
 
-     //Get the Balance of the Address
+     //Get the Balance of the Contract
      function BalanceOf() public view returns(uint) {
          return address(this).balance;
      }
@@ -75,8 +75,24 @@ contract BikeChain {
          
      }
 
+
+     // function for Frontend to specify that we can rent the bike without looking at the Renter Struct
      function canRentBike(address walletAddress) public view returns(bool){
          return renters[walletAddress].canRent;
+     }
+
+     // Deposit 
+     function deposit(address walletAddress) public payable{
+         renters[walletAddress].Balance += msg.value; //here we're dopositing money from the Contract but Crediting that money in the Renter's Account
+     }
+
+     //Make Due Payment
+     function makePayment(address walletAddress) public payable {
+         renters[walletAddress].Balance -= msg.value; // after paying the due amount money will be deducted from the Renter's Account
+         renters[walletAddress].canRent = true;
+         renters[walletAddress].Due = 0;
+         renters[walletAddress].Start = 0;
+         renters[walletAddress].End = 0;
      }
 
 }
