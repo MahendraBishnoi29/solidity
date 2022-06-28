@@ -42,10 +42,11 @@ contract BikeChain {
      function checkIn(address walletAddress) public {
          renters[walletAddress].Active = false;
          renters[walletAddress].End = block.timestamp; // give us the time when Renter had checked In
+         setDueAmount(walletAddress);
      }
 
      // subtracting the Renter's check out & check in Time for getting the all over Duration
-     function renterTimespan(uint start, uint end) public pure returns(uint) {
+     function renterTimespan(uint start, uint end) internal pure returns(uint) {
          return end - start;
      }
  
@@ -54,6 +55,28 @@ contract BikeChain {
          uint time = renterTimespan(renters[walletAddress].Start, renters[walletAddress].End);
          uint timeInMinutes = time / 60;
          return timeInMinutes;
+     }
+
+     //Get the Balance of the Address
+     function BalanceOf() public view returns(uint) {
+         return address(this).balance;
+     }
+
+     // Get the Balance of Renter
+     function balanceOfRenter(address walletAddress) public view returns(uint){
+         return renters[walletAddress].Balance;
+     }
+
+     // Set The Due Amount
+     function setDueAmount(address walletAddress) internal {
+         uint timeSpanMinutes = getTotalDuration(walletAddress);
+         uint fiveMinutesIncreament = timeSpanMinutes / 5;
+         renters[walletAddress].Due = fiveMinutesIncreament * 5000000000000000;
+         
+     }
+
+     function canRentBike(address walletAddress) public view returns(bool){
+         return renters[walletAddress].canRent;
      }
 
 }
