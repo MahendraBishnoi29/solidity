@@ -101,4 +101,18 @@ contract BikeChain {
          renters[walletAddress].End = 0;
      }
 
+     //Get Due Payment
+     function getDue(address walletAddress) public view returns(uint){
+         return renters[walletAddress].Due;
+     }
+
+     //Get Information about renter
+     function getRenter(address walletAddress) public view returns(string memory firstName, string memory lastName, bool canRent, bool Active ) {
+         firstName = renters[walletAddress].firstName;
+         lastName = renters[walletAddress].lastName;
+         canRent = renters[walletAddress].canRent;
+         Active = renters[walletAddress].Active;
+
+     }
+
 }
